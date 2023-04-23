@@ -1,0 +1,13 @@
+diff --git a/src/libstore/local-store.cc b/src/libstore/local-store.cc
+index b67668e52..5b76b91c1 100644
+--- a/src/libstore/local-store.cc
++++ b/src/libstore/local-store.cc
+@@ -590,7 +590,7 @@ static void canonicalisePathMetaData_(
+ {
+     checkInterrupt();
+ 
+-#if __APPLE__
++#if 0
+     /* Remove flags, in particular UF_IMMUTABLE which would prevent
+        the file from being garbage-collected. FIXME: Use
+        setattrlist() to remove other attributes as well. */
